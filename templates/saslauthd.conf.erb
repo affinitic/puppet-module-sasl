@@ -23,11 +23,12 @@ LDAP_BIND_DN: <%= ldap_bind_dn %>
 LDAP_BIND_PW: <%= ldap_bind_pw %>
 
 # Base de départ de la recherche
-LDAP_SEARCH_BASE: dc=root
+LDAP_SEARCH_BASE: <%= ldap_base %>
 # Et profondeur (sub / one / base )
 LDAP_SCOPE: sub
 
 # Filtre de recherche : users should login with email BUT we also support simple uid specifically for the cyrus admin user
-LDAP_FILTER: (|(mail=%u@%r)(&(uid=%u)(cn=Cyrus MASTER)))
+#LDAP_FILTER: (|(mail=%u@%r)(&(uid=%u)(cn=Cyrus MASTER)))
+ldap_filter: uid=%u
 # Et nom du champ contenant le mot de passe
 LDAP_PASSWORD_ATTR: userPassword
