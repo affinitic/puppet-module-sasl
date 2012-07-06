@@ -1,7 +1,8 @@
 class sasl (
   $authentication_ldap_servers,
+  $ldap_base,
   $ldap_bind_dn,
-  $ldap_bind_pw
+  $ldap_bind_pw,
   ) {
 
   if ! $authentication_ldap_servers or ! $ldap_bind_dn or ! $ldap_bind_pw{
