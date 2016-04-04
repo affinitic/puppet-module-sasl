@@ -1,5 +1,5 @@
 # SERVEUR LDAP
-LDAP_SERVERS: <% authentication_ldap_servers.each do |ldap_server| -%><%= ldap_server -%> <% end %>
+LDAP_SERVERS: <% authentication_ldap_servers.each_line do |ldap_server| -%><%= ldap_server -%> <% end %>
 # DOMAINE
 LDAP_DEFAULT_DOMAIN: <%= domain %>
 
