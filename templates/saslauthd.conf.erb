@@ -1,7 +1,7 @@
 # SERVEUR LDAP
-LDAP_SERVERS: <% authentication_ldap_servers.each_line do |ldap_server| -%><%= ldap_server -%> <% end %>
+LDAP_SERVERS: <% @authentication_ldap_servers.each_line do |ldap_server| -%><%= ldap_server -%> <% end %>
 # DOMAINE
-LDAP_DEFAULT_DOMAIN: <%= domain %>
+LDAP_DEFAULT_DOMAIN: <%= @domain %>
 
 LDAP_TIMEOUT: 10
 LDAP_TIME_LIMIT: 10
@@ -18,12 +18,12 @@ LDAP_USE_SASL: no
 LDAP_AUTH_METHOD: bind
 
 # Utilisateur utilisé pour la connexion - Si vide = Anonyme
-LDAP_BIND_DN: <%= ldap_bind_dn %>
+LDAP_BIND_DN: <%= @ldap_bind_dn %>
 # Et le mot de passe
-LDAP_BIND_PW: <%= ldap_bind_pw %>
+LDAP_BIND_PW: <%= @ldap_bind_pw %>
 
 # Base de départ de la recherche
-LDAP_SEARCH_BASE: <%= ldap_base %>
+LDAP_SEARCH_BASE: <%= @ldap_base %>
 # Et profondeur (sub / one / base )
 LDAP_SCOPE: sub
 
